@@ -1,15 +1,7 @@
 ## Repositorio de código útil
 En este repositorio se guarda código que resulta de utilidad.
 
-### ¿Qué es gitignore.io?
-- <a href="https://gitignore.io">Aplicacion web</a>
-- <a href="https://github.com/joeblau/gitignore.io">Repositorio de GitHub</a>
-
-### Colaboradores de Codigo_util
-- <a href="https://github.com/Javipell">Javier Pellicena</a>
-- <a href="https://github.com/AlexGracia">Alex Gracia</a>
-
-### Mapa del repositorio
+### Mapa
 <ul>
   <li><a href="https://github.com/AlexGracia/Codigo_util/tree/master/Hilos-Threads">Hilos-Threads</a></li>
   <ul>
@@ -20,3 +12,12 @@ En este repositorio se guarda código que resulta de utilidad.
     <li><a href="https://github.com/AlexGracia/Codigo_util/tree/master/Sql/Java">Java</a></li>
   </ul>
 </ul>
+
+### Colaboradores
+- <a href="https://github.com/Javipell">Javier Pellicena</a>
+- <a href="https://github.com/AlexGracia">Alex Gracia</a>
+
+## ¿Qué es gitignore.io?
+Es una aplicación web mediante la cual se genera el archivo .gitignore.
+- <a href="https://gitignore.io">Aplicacion web</a>
+- <a href="https://github.com/joeblau/gitignore.io">Repositorio de GitHub</a>
