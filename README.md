@@ -1,5 +1,5 @@
 ## Repositorio de código útil
-En este repositorio guardo código que me resulta de utilidad.
+En este repositorio se guarda código que resulta de utilidad.
 
 ### ¿Qué es gitignore.io?
 - <a href="https://gitignore.io">Aplicacion web</a>
