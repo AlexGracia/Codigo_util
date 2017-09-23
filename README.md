@@ -18,8 +18,9 @@ En este repositorio se guarda código que resulta de utilidad.
 - <a href="https://github.com/SmoothBrave">Belén Hughes</a>
 - <a href="https://github.com/AlexGracia">Alex Gracia</a>
 
-### MIT License
-- Para más información, visitar el siguiente enlace https://choosealicense.com/licenses/mit/#
+### Licencia
+<a href="https://github.com/AlexGracia/Codigo_util/blob/master/LICENSE.md">MIT</a>
+<br>Información obtenida del siguiente enlace https://choosealicense.com/licenses/mit/#
 
 ## ¿Qué es gitignore.io?
 Es una aplicación web mediante la cual se genera el archivo .gitignore.
