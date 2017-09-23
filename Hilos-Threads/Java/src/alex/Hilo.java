@@ -12,7 +12,7 @@ import java.util.logging.Logger;
 public class Hilo extends Thread {
 
     // Variables
-    private static final long SEGUNDO = 1000;
+    private static final long SEGUNDO = 1000; // 1 segundo = 1000 milisegundos
     private long contador;
 
     public Hilo() {
