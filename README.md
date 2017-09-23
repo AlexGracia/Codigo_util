@@ -15,6 +15,7 @@ En este repositorio se guarda código que resulta de utilidad.
 
 ### Colaboradores
 - <a href="https://github.com/Javipell">Javier Pellicena</a>
+- <a href="https://github.com/SmoothBrave">Belén Hughes</a>
 - <a href="https://github.com/AlexGracia">Alex Gracia</a>
 
 ## ¿Qué es gitignore.io?
