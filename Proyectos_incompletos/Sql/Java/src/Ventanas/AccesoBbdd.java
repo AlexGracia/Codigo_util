@@ -9,7 +9,7 @@ import Conexion.ConexionMySql;
 
 /**
  *
- * @author Javier y Alex
+ * @author javier
  */
 public class AccesoBbdd extends javax.swing.JDialog {
 
