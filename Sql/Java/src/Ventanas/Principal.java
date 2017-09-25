@@ -214,8 +214,7 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuSalirActionPerformed
 
     private void jMenuAccesoBbddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuAccesoBbddActionPerformed
-        AccesoBbdd frmAcceso = new AccesoBbdd();
-        frmAcceso.setVisible(true);
+        new AccesoBbdd(this, true);
     }//GEN-LAST:event_jMenuAccesoBbddActionPerformed
 
     private void jMenuItemListadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemListadoActionPerformed
@@ -223,11 +222,12 @@ public class Principal extends javax.swing.JFrame {
         String sql = "SELECT * FROM persona";
         listaDatos(sql);
     }//GEN-LAST:event_jMenuItemListadoActionPerformed
-    
+
     /**
-     * Metodo jMenuItemListadoIdActionPerformed
-     * ** obsoleto utilizar el metodo jMenuBuscarActionPerformed
-     * @param evt 
+     * Metodo jMenuItemListadoIdActionPerformed ** obsoleto utilizar el metodo
+     * jMenuBuscarActionPerformed
+     *
+     * @param evt
      */
     private void jMenuItemListadoIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemListadoIdActionPerformed
 
@@ -281,7 +281,7 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItemListadoIdActionPerformed
 
     private void jMenuAñadirRegistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuAñadirRegistroActionPerformed
-        // TODO add your handling code here:
+
         jPanel1.setVisible(false);
         if (creaConexion() == true) {
             Persona p = new Persona();
@@ -290,21 +290,20 @@ public class Principal extends javax.swing.JFrame {
             String mensaje = "Introduce \n\n";
             //String[] datosSolicitados = {"Identificador", "Nombre", "Edad", "Profesion", "Telefono"};
             ArrayList datosSolicitados = conexion.getNombreCampos();
-            String[] datosRecogidos = new String[ datosSolicitados.size() ];
+            String[] datosRecogidos = new String[datosSolicitados.size()];
 
-            for (int i = 0; i < datosSolicitados.size(); i++) 
-            {
+            for (int i = 0; i < datosSolicitados.size(); i++) {
                 datosRecogidos[i] = JOptionPane.showInputDialog(null,
                         (mensaje + datosSolicitados.get(i)) + " : \n");
             }
 
             int b = 0;
-            p.setIdPersona(Integer.parseInt( datosRecogidos[b++] ) );
-            p.setNombrePersona( datosRecogidos[b++] );
-            p.setEdadPersona(Integer.parseInt( datosRecogidos[b++] ) );
-            p.setProfesionPersona( datosRecogidos[b++] );
-            p.setTelefonoPersona( datosRecogidos[b++] );
-            p.setCasadoPersona(Boolean.valueOf( datosRecogidos[b++] ) );
+            p.setIdPersona(Integer.parseInt(datosRecogidos[b++]));
+            p.setNombrePersona(datosRecogidos[b++]);
+            p.setEdadPersona(Integer.parseInt(datosRecogidos[b++]));
+            p.setProfesionPersona(datosRecogidos[b++]);
+            p.setTelefonoPersona(datosRecogidos[b++]);
+            p.setCasadoPersona(Boolean.valueOf(datosRecogidos[b++]));
 
             conexion.registrarElena(p);
         } else {
@@ -314,7 +313,6 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuAñadirRegistroActionPerformed
 
     private void jMenuAñadirRegistro2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuAñadirRegistro2ActionPerformed
-        // TODO add your handling code here:
         jPanel1.setVisible(false);
         if (creaConexion() == true) {
             Persona p = new Persona();
@@ -322,14 +320,14 @@ public class Principal extends javax.swing.JFrame {
 
             String mensaje = "Introduce \n\n";
             //String[] datosSolicitados = {"Identificador", "Nombre", "Edad", "Profesion", "Telefono"};
-            
+
             ArrayList datosSolicitados = conexion.getNombreCampos();
-            
-            String[] datosRecogidos = new String[ datosSolicitados.size() ];
+
+            String[] datosRecogidos = new String[datosSolicitados.size()];
 
             for (int i = 0; i < datosSolicitados.size(); i++) {
                 datosRecogidos[i] = JOptionPane.showInputDialog(null,
-                        (mensaje + datosSolicitados.get(i))  + " : \n");
+                        (mensaje + datosSolicitados.get(i)) + " : \n");
             }
 
             int b = 0;
@@ -338,16 +336,16 @@ public class Principal extends javax.swing.JFrame {
             p.setEdadPersona(Integer.parseInt(datosRecogidos[b++]));
             p.setProfesionPersona(datosRecogidos[b++]);
             p.setTelefonoPersona(datosRecogidos[b++]);
-            p.setCasadoPersona(Boolean.valueOf( datosRecogidos[b++] ) );
+            p.setCasadoPersona(Boolean.valueOf(datosRecogidos[b++]));
 
             String sql = "INSERT INTO persona VALUES ( '" + p.getIdPersona()
                     + "', '" + p.getNombrePersona()
                     + "', '" + p.getEdadPersona()
                     + "', '" + p.getProfesionPersona()
-                    + "', '" + p.getTelefonoPersona() 
+                    + "', '" + p.getTelefonoPersona()
                     + "', " + p.getCasadoPersona()
                     + " )";
-            System.out.println("sql "+sql);
+            System.out.println("sql " + sql);
 
             conexion.modificaRegistros(sql);
 
@@ -359,63 +357,52 @@ public class Principal extends javax.swing.JFrame {
     private void jMenuBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuBuscarActionPerformed
 
         jPanel1.setVisible(false);
-        String sql ="";
-        int seleccion =0 ;
+        String sql = "";
+        int seleccion = 0;
         String cadena = "Seleccione el dato que desea buscar \n";
         //String[] datosSolicitados = {"Id", "Nombre", "Edad", "Profesion", "Telefono"};
 
+        String respuesta = "";
 
-        String respuesta ="";
-        
-        if (creaConexion() == true) 
-        {
+        if (creaConexion() == true) {
             // guardo en un arralist los nombres de los campos de la tabla
-            ArrayList datosSolicitados = conexion.getNombreCampos() ;
+            ArrayList datosSolicitados = conexion.getNombreCampos();
 
             for (int i = 0; i < datosSolicitados.size(); i++) {
                 cadena += "\n " + (i + 1) + ".- " + datosSolicitados.get(i);
             }
-            respuesta = JOptionPane.showInputDialog(null, cadena, "Seleccione una opcion", 
+            respuesta = JOptionPane.showInputDialog(null, cadena, "Seleccione una opcion",
                     JOptionPane.OK_CANCEL_OPTION);
             codigo:
             {
-                if (respuesta == null) 
-                {
+                if (respuesta == null) {
                     mensajeError();
                     break codigo;
-                } 
-                else 
-                {
-                    try
-                    {
-                    seleccion = Integer.parseInt(respuesta) - 1;
-                    if (seleccion < 0 || seleccion > datosSolicitados.size()) 
-                    {
-                        mensajeError();
-                        break codigo;
-                    }
-                    cadena = "Introduzca el dato \n"
-                            + datosSolicitados.get(seleccion);
-                    respuesta = JOptionPane.showInputDialog(null, cadena);
-                    }
-                    catch (Exception Ex)
-                    {
+                } else {
+                    try {
+                        seleccion = Integer.parseInt(respuesta) - 1;
+                        if (seleccion < 0 || seleccion > datosSolicitados.size()) {
+                            mensajeError();
+                            break codigo;
+                        }
+                        cadena = "Introduzca el dato \n"
+                                + datosSolicitados.get(seleccion);
+                        respuesta = JOptionPane.showInputDialog(null, cadena);
+                    } catch (Exception Ex) {
                         mensajeError();
                     }
-                    
-                    sql = "SELECT * FROM persona WHERE " 
-                            + datosSolicitados.get(seleccion)+" LIKE '%"+ respuesta +"%' ";
-                    
+
+                    sql = "SELECT * FROM persona WHERE "
+                            + datosSolicitados.get(seleccion) + " LIKE '%" + respuesta + "%' ";
+
                     listaDatos(sql);
                 }
             }
         }
     }//GEN-LAST:event_jMenuBuscarActionPerformed
 
-    public void listaDatos(String sql)
-    {
-        if (creaConexion() == true) 
-        {
+    public void listaDatos(String sql) {
+        if (creaConexion() == true) {
             ListaPersona lista = new ListaPersona();
             Persona p = new Persona();
 
@@ -424,16 +411,15 @@ public class Principal extends javax.swing.JFrame {
 
             jPanel1.setVisible(true);
             // guardo en un arralist los nombres de los campos de la tabla
-            ArrayList datosSolicitados = conexion.getNombreCampos() ;
+            ArrayList datosSolicitados = conexion.getNombreCampos();
             // creamos un objeto para guardar los nombres de las columnas
             //Object[] columnas = {"IdPersona", "Nombre", "Edad", "Profesion", "Telefono"};
             Object[] columnas = new Object[datosSolicitados.size()];
             System.out.println("llego listaDatos");
-            for (int i = 0; i < datosSolicitados.size(); i++) 
-            {
+            for (int i = 0; i < datosSolicitados.size(); i++) {
                 columnas[i] = datosSolicitados.get(i);
             }
-            
+
             // creamos un objeto array bidimensional para guardar los registro
             Object[][] filas = new Object[numeroRegistros][columnas.length];
 
@@ -455,26 +441,22 @@ public class Principal extends javax.swing.JFrame {
             }
         }
     }
-    
-    public void mensajeError()
-    {
-        JOptionPane.showMessageDialog(null, "Introduzca el dato solicitado.", 
+
+    public void mensajeError() {
+        JOptionPane.showMessageDialog(null, "Introduzca el dato solicitado.",
                 "Datos Erroneos", JOptionPane.ERROR_MESSAGE);
     }
-    
-    
-    public Boolean creaConexion()
-    {
+
+    public Boolean creaConexion() {
         Boolean respuesta = false;
 
-        if (!AccesoBbdd.txtBaseDatos.getText().equals("") 
+        if (!AccesoBbdd.txtBaseDatos.getText().equals("")
                 && !AccesoBbdd.txtUsuario.getText().equals("")
-                && !String.valueOf( AccesoBbdd.txtContraseña.getPassword() ).equals("") ) 
-        {
+                && !String.valueOf(AccesoBbdd.txtContraseña.getPassword()).equals("")) {
             // creo una conexion con los valores ocultos del formulario principal
             conexion = new ConexionMySql(AccesoBbdd.txtBaseDatos.getText(),
-                    AccesoBbdd.txtUsuario.getText(), 
-                    String.valueOf( AccesoBbdd.txtContraseña.getPassword() ) );
+                    AccesoBbdd.txtUsuario.getText(),
+                    String.valueOf(AccesoBbdd.txtContraseña.getPassword()));
             respuesta = true;
         }
         return respuesta;

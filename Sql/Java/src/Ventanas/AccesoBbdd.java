@@ -4,29 +4,33 @@
  * and open the template in the editor.
  */
 package Ventanas;
+
 import Conexion.ConexionMySql;
 
 /**
  *
- * @author javier
+ * @author Javier y Alex
  */
-public class AccesoBbdd extends javax.swing.JFrame {
+public class AccesoBbdd extends javax.swing.JDialog {
 
-    public ConexionMySql conexion ;
+    // Variables
+    public ConexionMySql conexion;
     public Boolean acceso = false;
-    
+
     /**
-     * Creates new form AccesoBbdd
+     *
+     * @param parent
+     * @param modal
      */
-    public AccesoBbdd() {
+    public AccesoBbdd(java.awt.Frame parent, boolean modal) {
+        super(parent, modal);
         initComponents();
-        // centrar el formulario en la ventan
-        this.setLocationRelativeTo(null);
+        super.setLocationRelativeTo(parent);
         lblDisponibles.setVisible(false);
         lblNombreBbdd.setVisible(false);
         txtBaseDatos.setVisible(false);
         cmbBbdd.setVisible(false);
-        
+        super.setVisible(true);
     }
 
     /**
@@ -51,8 +55,12 @@ public class AccesoBbdd extends javax.swing.JFrame {
         lblNombreBbdd = new javax.swing.JLabel();
         jLabelFondo = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(402, 433));
+        setMinimumSize(new java.awt.Dimension(402, 433));
         setUndecorated(true);
+        setResizable(false);
+        setSize(new java.awt.Dimension(402, 433));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnAcceso.setBackground(new java.awt.Color(0, 0, 204));
@@ -67,11 +75,6 @@ public class AccesoBbdd extends javax.swing.JFrame {
         getContentPane().add(btnAcceso, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 380, 160, -1));
 
         jLabelIcono.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/usuario.png"))); // NOI18N
-        jLabelIcono.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                jLabelIconoMousePressed(evt);
-            }
-        });
         getContentPane().add(jLabelIcono, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 60, -1, -1));
 
         jLabel1.setBackground(new java.awt.Color(0, 0, 153));
@@ -105,12 +108,6 @@ public class AccesoBbdd extends javax.swing.JFrame {
         txtContraseña.setBackground(new java.awt.Color(0, 0, 153));
         txtContraseña.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         txtContraseña.setForeground(new java.awt.Color(255, 255, 255));
-        txtContraseña.setText("jPasswordField1");
-        txtContraseña.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                txtContraseñaMouseEntered(evt);
-            }
-        });
         getContentPane().add(txtContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 340, 160, -1));
 
         btnSalir.setBackground(new java.awt.Color(0, 0, 204));
@@ -146,110 +143,54 @@ public class AccesoBbdd extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAccesoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAccesoActionPerformed
-                    
+
         // si acceso es false con el usuario y contraseña busca las bases de datos
-        if (acceso!=true) 
-        {
-            String cadena ="";
-            if (txtUsuario.getText() != null && txtContraseña.getPassword() != null)
-            {
-                conexion = new ConexionMySql( txtUsuario.getText() , 
-                        String.valueOf( txtContraseña.getPassword() ) );
-                
+        if (acceso != true) {
+            String cadena = "";
+            if (txtUsuario.getText() != null && txtContraseña.getPassword() != null) {
+                conexion = new ConexionMySql(txtUsuario.getText(),
+                        String.valueOf(txtContraseña.getPassword()));
+
                 // recorre las bbdd encontradas y las añade al combobox
-                for (int i = 0; i < conexion.getNombreCatalogos().size(); i++) 
-                {
+                for (int i = 0; i < conexion.getNombreCatalogos().size(); i++) {
                     cadena = (String) conexion.getNombreCatalogos().get(i);
-                    cmbBbdd.addItem( cadena );
+                    cmbBbdd.addItem(cadena);
                 }
                 // a partir de aqui el acceso sera a bbdd seleccionada
-                acceso=true;
+                acceso = true;
                 lblDisponibles.setVisible(true);
                 lblNombreBbdd.setVisible(true);
                 txtBaseDatos.setVisible(true);
                 cmbBbdd.setVisible(true);
-            }    
-            else 
-            {
+            } else {
                 System.out.println("faltan datos");
             }
-        } 
-        else if (txtBaseDatos.getText() != null && txtUsuario.getText() != null 
-                && txtContraseña.getPassword() != null) 
-        {
+        } else if (txtBaseDatos.getText() != null && txtUsuario.getText() != null
+                && txtContraseña.getPassword() != null) {
             // establezco una conexion con los valores introducidos
-            conexion = new ConexionMySql( txtBaseDatos.getText(), 
-                    txtUsuario.getText() , 
-                    String.valueOf( txtContraseña.getPassword() ) );
-            
-            this.setVisible(false);
-            
+            conexion = new ConexionMySql(txtBaseDatos.getText(),
+                    txtUsuario.getText(),
+                    String.valueOf(txtContraseña.getPassword()));
+
+            setVisible(false);
+
             // desconecto la conexion porque tengo guardados los valores en el formulario
             conexion.getDesconexion();
-            
+
         } else {
             System.out.println("faltan datos");
         }
-        
+
     }//GEN-LAST:event_btnAccesoActionPerformed
 
-    
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
-        // TODO add your handling code here:
-        this.setVisible(false);
+        dispose();
     }//GEN-LAST:event_btnSalirActionPerformed
 
-    private void txtContraseñaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtContraseñaMouseEntered
-        // TODO add your handling code here:
-        //txtContraseña.setText("");
-    }//GEN-LAST:event_txtContraseñaMouseEntered
-
-    private void jLabelIconoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIconoMousePressed
-        // TODO add your handling code here:
-        txtBaseDatos.setText("mibasedatos");
-        txtUsuario.setText("root");
-        txtContraseña.setText("12345.Aaa");
-    }//GEN-LAST:event_jLabelIconoMousePressed
-
     private void cmbBbddItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cmbBbddItemStateChanged
-        // TODO add your handling code here:
-        txtBaseDatos.setText( String.valueOf( cmbBbdd.getSelectedItem() ) );
+        txtBaseDatos.setText(String.valueOf(cmbBbdd.getSelectedItem()));
     }//GEN-LAST:event_cmbBbddItemStateChanged
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(AccesoBbdd.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(AccesoBbdd.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(AccesoBbdd.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(AccesoBbdd.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new AccesoBbdd().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAcceso;
@@ -265,4 +206,5 @@ public class AccesoBbdd extends javax.swing.JFrame {
     public static javax.swing.JPasswordField txtContraseña;
     public static javax.swing.JTextField txtUsuario;
     // End of variables declaration//GEN-END:variables
+
 }
