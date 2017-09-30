@@ -7,7 +7,7 @@ En este repositorio se guarda código que resulta de utilidad.
 - <a href="https://github.com/AlexGracia">Alex Gracia</a>
 
 ### Licencia
-<a href="https://github.com/AlexGracia/Codigo_util/blob/master/LICENSE.md">MIT</a>
+<a href="LICENSE.md">MIT</a>
 <br>Información obtenida del siguiente enlace https://choosealicense.com/licenses/mit/#
 
 ## ¿Qué es gitignore.io?
