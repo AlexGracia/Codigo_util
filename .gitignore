@@ -1,0 +1,10 @@
+# Created by https://www.gitignore.io/api/netbeans
+# Y modificado por Alex Gracia
+
+*/Java/build/
+*/Java/nbbuild/
+*/Java/dist/
+*/Java/nbdist/
+*/Java/.nb-gradle/
+
+# End of https://www.gitignore.io/api/netbeans
