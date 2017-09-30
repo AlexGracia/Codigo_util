@@ -1,6 +1,8 @@
 # Created by https://www.gitignore.io/api/netbeans
 # Y modificado por Alex Gracia
 
+### NetBeans Java ###
+*/Java/nbproject/private/
 */Java/build/
 */Java/nbbuild/
 */Java/dist/
