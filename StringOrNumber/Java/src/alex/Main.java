@@ -42,6 +42,8 @@ public class Main {
         System.out.println(textoIntroducido + " es un numero decimal: "
                 + StringOrNumber.isDecimal(textoIntroducido));
 
+		/* Ya puedo manejar el dato introducido por el usuario,
+        * sin que salten excepciones.*/
         if (StringOrNumber.isDecimal(textoIntroducido)) {
             Double.parseDouble(textoIntroducido);
         }
