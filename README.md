@@ -7,8 +7,8 @@ En este repositorio se guarda código que resulta de utilidad.
 - <a href="https://github.com/AlexGracia">Alex Gracia</a>
 
 ### Licencia
-<a href="LICENSE.md">MIT</a>
-<br>Información obtenida del siguiente enlace https://choosealicense.com/licenses/mit/#
+<a href="LICENSE.md">GNU Affero General Public License v3.0</a>
+<br>Información obtenida del siguiente enlace https://choosealicense.com/licenses/agpl-3.0/#
 
 ## ¿Qué es gitignore.io?
 Es una aplicación web mediante la cual se genera el archivo <a href="https://help.github.com/articles/ignoring-files/">.gitignore</a>.
