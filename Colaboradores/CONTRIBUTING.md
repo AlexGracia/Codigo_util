@@ -27,7 +27,8 @@ Quitar los comentarios ```TODO``` cuando ya no sean necesarios.
 
 ### Librerias
 Si el proyecto necesita librerias, hay que crear una carpeta lib en el directorio del proyecto y guardar las librerias en dicha carpeta.
-* NombreProyecto
-  * src
-  * lib
+* NombreProyecto/
+  * src/
+  * lib/
+    * nombreLibreria.jar
   * ...
