@@ -15,11 +15,11 @@ Los proyectos representan programas, o fragmentos de programas, de consola o lin
 
 ### Tareas
 Para acordarnos de lo que queremos programar es bueno comentar el codigo usando la palabra reservada ```TODO```, en GitHub
-tambien podemos crear un [issue](../../issues) con el label TODO.
+tambien podemos crear un [issue](../issues) con el label TODO.
 
 Para abrir la ventana de las tareas en NetBeans, basta con pulsar las teclas <kbd>Ctrl</kbd>+<kbd>6</kbd>.
 <br>O bien siguiendo los pasos de la siguiente imagen
-<img src="Colaboradores/img/TareasNetBeans.png" width="640px" height="512px"/>
+<img src="img/TareasNetBeans.png" width="640px" height="512px"/>
 
 Para crear un comentario ```TODO``` en el codigo fuente, hay que escribir ```//TODO: ``` seguido de una descripcion de la tarea.
 
