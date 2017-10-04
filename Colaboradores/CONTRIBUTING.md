@@ -26,9 +26,19 @@ Para crear un comentario ```TODO``` en el codigo fuente, hay que escribir ```//T
 Quitar los comentarios ```TODO``` cuando ya no sean necesarios.
 
 ### Librerias
-Si el proyecto necesita librerias, hay que crear una carpeta lib en el directorio del proyecto y guardar las librerias en dicha carpeta.
+Si el proyecto necesita librerias, hay que crear una carpeta "_lib_" en el directorio del proyecto y guardar las librerias en dicha carpeta.
 * NombreProyecto/
   * src/
   * lib/
     * nombreLibreria.jar
+    * ...
+  * ...
+
+### Base de datos
+Si el proyecto necesita una base de datos, hay que crear una carpeta "_database_" en el directorio del proyecto y guardar la base de datos
+en dicha carpeta.
+* NombreProyecto/
+  * src/
+  * database/
+	  * nombreBaseDeDatos.sql
   * ...
