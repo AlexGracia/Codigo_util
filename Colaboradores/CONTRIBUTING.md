@@ -1,4 +1,4 @@
-## Contribuir a Codigo_util
+## :tada: Contribuir a Codigo_util :confetti_ball:
 En este documento se ofrecen pautas para contribuir con Codigo_util.
 
 ### Tipo de proyectos
