@@ -3,12 +3,12 @@ En este documento se ofrecen pautas para contribuir con Codigo_util.
 
 ### Tipo de proyectos
 Los proyectos representan programas de consola o linea de comandos.
-* Entrada de datos: para pedir datos se utiliza el siguiente codigo
+* Entrada de datos, para pedir datos se utiliza el siguiente codigo:
   ```java
   Scanner sc = new Scanner(System.in);
   String textoIntroducido = sc.next();
   ```
-* Salida de datos: para mostrar mensajes se utiliza el siguiente codigo
+* Salida de datos, para mostrar mensajes se utiliza el siguiente codigo:
   ```java
   System.out.println("Mensaje a mostrar");
   ```
