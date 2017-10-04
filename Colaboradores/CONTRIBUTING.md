@@ -2,13 +2,13 @@
 En este documento se ofrecen pautas para contribuir con Codigo_util.
 
 ### Tipo de proyectos
-Los proyectos representan programas, o fragmentos de programas, de consola o linea de comandos.
-* Entrada datos: para pedir datos se utiliza el siguiente codigo
+Los proyectos representan programas de consola o linea de comandos.
+* Entrada de datos: para pedir datos se utiliza el siguiente codigo
   ```java
   Scanner sc = new Scanner(System.in);
   String textoIntroducido = sc.next();
   ```
-* Salida datos: para mostrar mensajes se utiliza el siguiente codigo
+* Salida de datos: para mostrar mensajes se utiliza el siguiente codigo
   ```java
   System.out.println("Mensaje a mostrar");
   ```
@@ -34,7 +34,7 @@ Si el proyecto necesita librerias, hay que crear una carpeta "_lib_" en el direc
     * ...
   * ...
 
-### Base de datos
+### Bases de datos
 Si el proyecto necesita una base de datos, hay que crear una carpeta "_database_" en el directorio del proyecto y guardar la base de datos
 en dicha carpeta.
 * NombreProyecto/
