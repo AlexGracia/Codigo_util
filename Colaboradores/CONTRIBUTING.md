@@ -25,20 +25,43 @@ Para crear un comentario ```TODO``` en el codigo fuente, hay que escribir ```//T
 
 Quitar los comentarios ```TODO``` cuando ya no sean necesarios.
 
+## Estructura del proyecto
+> :open_file_folder: Codigo_util/
+>> :open_file_folder: NombreProyecto/
+>>> :open_file_folder: Lenguaje_utilizado/
+>>>> :open_file_folder: src/
+>>>>> :file_folder: nombreAutor/
+>>>>
+>>>> :page_facing_up: README.md
+>>>>
+>>>> ...
+
+### Ejemplos de estructura de proyecto
+* [Hilos-Threads](../Hilos-Threads/Java)
+* [StringOrNumber](../StringOrNumber/Java)
+
 ### Librerias
-Si el proyecto necesita librerias, hay que crear una carpeta "_lib_" en el directorio del proyecto y guardar las librerias en dicha carpeta.
-* NombreProyecto/
-  * src/
-  * lib/
-    * nombreLibreria.jar
-    * ...
-  * ...
+Si el proyecto necesita librerias, hay que crear una carpeta "___lib___" en el directorio del proyecto y guardar las librerias en dicha carpeta.
+> :open_file_folder: Codigo_util/
+>> :open_file_folder: NombreProyecto/
+>>> :open_file_folder: Lenguaje_utilizado/
+>>>> :file_folder: src/
+>>>>
+>>>> :open_file_folder: ___lib___/
+>>>>> :page_facing_up: nombreLibreria.jar
+>>>>>
+>>>>> ...
+>>>>
+>>>> ...
 
 ### Bases de datos
-Si el proyecto necesita una base de datos, hay que crear una carpeta "_database_" en el directorio del proyecto y guardar la base de datos
-en dicha carpeta.
-* NombreProyecto/
-  * src/
-  * database/
-	  * nombreBaseDeDatos.sql
-  * ...
+Si el proyecto necesita una base de datos, hay que crear una carpeta "___database___" en el directorio del proyecto y guardar la base de datos en dicha carpeta.
+> :open_file_folder: Codigo_util/
+>> :open_file_folder: NombreProyecto/
+>>> :open_file_folder: Lenguaje_utilizado/
+>>>> :file_folder: src/
+>>>>
+>>>> :open_file_folder: ___database___/
+>>>>> :page_facing_up: nombreBaseDeDatos.sql
+>>>>
+>>>> ...
