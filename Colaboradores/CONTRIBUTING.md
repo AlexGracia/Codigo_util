@@ -1,6 +1,8 @@
 ## :tada: Contribuir a Codigo_util :confetti_ball:
 En este documento se ofrecen pautas para contribuir con Codigo_util.
 
+> Nota: Para más información visitar el siguiente artículo [setting-guidelines-for-repository-contributors](https://help.github.com/articles/setting-guidelines-for-repository-contributors/).
+
 ### Tipo de proyectos
 Los proyectos representan programas de consola o linea de comandos.
 * Entrada de datos, para pedir datos se utiliza el siguiente codigo:
