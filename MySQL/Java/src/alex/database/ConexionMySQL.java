@@ -17,7 +17,8 @@ public class ConexionMySQL {
             urlJDBC,
             user,
             pass;
-    private Connection conexion;
+    // Variables del paquete alex.database
+    static Connection CONEXION;
 
     // Constructor
     public ConexionMySQL() {
@@ -29,18 +30,16 @@ public class ConexionMySQL {
     }
 
     /**
-     * Metodo que abre y devuelve la conexion a MySQL
-     *
-     * @return conexion
+     * Metodo que abre una conexion a MySQL
      */
-    public Connection getConexion() {
+    public void abrirConexion() {
         try {
 
             // Cargar el Driver MySQL
             Class.forName("com.mysql.jdbc.Driver");
 
             // Crear enlace hacia la base de datos
-            conexion = DriverManager.getConnection(urlJDBC, user, pass);
+            CONEXION = DriverManager.getConnection(urlJDBC, user, pass);
 
         } catch (ClassNotFoundException cnfe) {
             System.out.println("Error");
@@ -50,18 +49,18 @@ public class ConexionMySQL {
             System.out.println("Error conectando a MySQL");
         }
 
-        return conexion;
     }
 
     /**
      * Metodo que cierra la conexion a MySQL
      */
-    public void cerrarConexion() {
+    public static void cerrarConexion() {
         try {
-            conexion.close();
+            CONEXION.close();
         } catch (SQLException ex) {
             System.out.println("Error");
             System.out.println("Error cerrando la conexion a MySQL");
         }
     }
+
 }
