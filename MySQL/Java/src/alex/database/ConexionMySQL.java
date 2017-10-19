@@ -18,7 +18,7 @@ public class ConexionMySQL {
             user,
             pass;
     // Variables del paquete alex.database
-    static Connection CONEXION;
+    static Connection conexion;
 
     // Constructor
     public ConexionMySQL() {
@@ -39,7 +39,7 @@ public class ConexionMySQL {
             Class.forName("com.mysql.jdbc.Driver");
 
             // Crear enlace hacia la base de datos
-            CONEXION = DriverManager.getConnection(urlJDBC, user, pass);
+            conexion = DriverManager.getConnection(urlJDBC, user, pass);
 
         } catch (ClassNotFoundException cnfe) {
             System.out.println("Error");
@@ -56,7 +56,7 @@ public class ConexionMySQL {
      */
     public static void cerrarConexion() {
         try {
-            CONEXION.close();
+            conexion.close();
         } catch (SQLException ex) {
             System.out.println("Error");
             System.out.println("Error cerrando la conexion a MySQL");

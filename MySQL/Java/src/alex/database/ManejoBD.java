@@ -3,8 +3,6 @@ package alex.database;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
@@ -30,9 +28,9 @@ public class ManejoBD {
         String resultado = "";
         try {
             while (rs.next()) {
-                resultado += "id: " + rs.getInt(0); // Columna id
+                resultado += "id: " + rs.getString(1); // Columna id
                 resultado += "\n"; // Salto de linea
-                resultado += "nombre_columna: " + rs.getString(1); // Columna nombre_columna
+                resultado += "nombre_columna: " + rs.getString(2); // Columna nombre_columna
                 resultado += "\n"; // Salto de linea
             }
         } catch (SQLException ex) {
@@ -78,20 +76,12 @@ public class ManejoBD {
         ResultSet rs = null;
         try {
 
-            stmt = ConexionMySQL.CONEXION.createStatement();
+            stmt = ConexionMySQL.conexion.createStatement();
             rs = stmt.executeQuery(sql);
 
         } catch (SQLException ex) {
             System.out.println("Error");
             System.out.println("Error ejecutando el select");
-        } finally {
-            try {
-                rs.close();
-                stmt.close();
-            } catch (SQLException ex) {
-                System.out.println("Error");
-                System.out.println("Error cerrando el ResultSet o el Statement");
-            }
         }
 
         return rs;
@@ -102,7 +92,7 @@ public class ManejoBD {
         Statement stmt = null;
         try {
 
-            stmt = ConexionMySQL.CONEXION.createStatement();
+            stmt = ConexionMySQL.conexion.createStatement();
             int n = stmt.executeUpdate(sql);
             if (n > 0) {
                 System.out.println("La base de datos ha sido modificada.");

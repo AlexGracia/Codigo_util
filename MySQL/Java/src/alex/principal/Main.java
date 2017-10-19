@@ -2,7 +2,6 @@ package alex.principal;
 
 import alex.database.ConexionMySQL;
 import alex.database.ManejoBD;
-import java.sql.Connection;
 import java.util.Scanner;
 
 /**
