@@ -2,7 +2,7 @@
 En este repositorio se guarda código que resulta de utilidad.
 
 ### :busts_in_silhouette: Colaboradores
-Para ver como se puede colaborar a este repositorio ver el archivo [CONTRIBUTING.md](Colaboradores/CONTRIBUTING.md).
+Para ver como se puede colaborar a este repositorio ver el archivo [CONTRIBUTING.md](.github/CONTRIBUTING.md).
 
 ### :copyright: Licencia
 [GNU Affero General Public License v3.0](LICENSE.md).
