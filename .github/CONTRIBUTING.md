@@ -3,6 +3,8 @@ En este documento se ofrecen pautas para contribuir con Codigo_util.
 
 > Nota: Para más información visitar el siguiente artículo [setting-guidelines-for-repository-contributors](https://help.github.com/articles/setting-guidelines-for-repository-contributors/).
 
+Ten en cuenta que Codigo_util se publica con un [código de conducta](CODE_OF_CONDUCT.md). Al participar en este proyecto, acepta cumplir sus términos.
+
 ### Tipo de proyectos
 Los proyectos representan programas de consola o linea de comandos.
 * Entrada de datos, para pedir datos se utiliza el siguiente codigo:
