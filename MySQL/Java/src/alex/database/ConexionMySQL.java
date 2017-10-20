@@ -47,6 +47,8 @@ public class ConexionMySQL {
         } catch (SQLException ex) {
             System.out.println("Error");
             System.out.println("Error conectando a MySQL");
+            System.out.println("Programa cerrado.");
+            System.exit(-1);
         }
 
     }

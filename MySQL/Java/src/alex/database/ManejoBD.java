@@ -22,7 +22,11 @@ public class ManejoBD {
         objConexion.abrirConexion();
     }
 
-    // TODO: mostrar (select)
+    /**
+     * Metodo que devuelve los datos de la tabla nombre_tabla.
+     *
+     * @return resultado
+     */
     public String mostrar() {
         ResultSet rs = _mostrarDatos("select * from nombre_tabla");
         String resultado = "";
@@ -47,6 +51,12 @@ public class ManejoBD {
         return resultado;
     }
 
+    /**
+     * Metodo que inserta un valor, en la tabla nombre_tabla, pasado por
+     * parametro.
+     *
+     * @param valor
+     */
     public void insertar(String valor) {
         String sql = "";
         sql += "insert into nombre_tabla (nombre_columna) values ('";
@@ -55,6 +65,13 @@ public class ManejoBD {
         _modificarBD(sql);
     }
 
+    /**
+     * Metodo que actualiza un dato, en la tabla nombre_tabla, especificando el
+     * id.
+     *
+     * @param valor
+     * @param index
+     */
     public void actualizar(String valor, String index) {
         String sql = "";
         sql += "update nombre_tabla set nombre_columna = '";
@@ -64,6 +81,12 @@ public class ManejoBD {
         _modificarBD(sql);
     }
 
+    /**
+     * Metodo que borra un dato, en la tabla nombre_tabla, coincidente con el id
+     * pasado por parametro.
+     *
+     * @param index
+     */
     public void borrar(String index) {
         String sql = "";
         sql += "delete from nombre_tabla where id = ";
