@@ -1,4 +1,4 @@
-package alex.Principal;
+package alex.principal2;
 
 import java.awt.Desktop;
 import java.io.File;
