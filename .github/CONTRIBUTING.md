@@ -18,16 +18,16 @@ Los proyectos representan programas de consola o linea de comandos.
   ```
 
 ### Tareas
-Para acordarnos de lo que queremos programar es bueno comentar el codigo usando la palabra reservada ```TODO```, en GitHub
-tambien podemos crear un [issue](../../../issues) con el label TODO.
+Para acordarnos de lo que queremos programar es bueno comentar el codigo usando la palabra reservada `TODO`, en GitHub
+tambien podemos crear un [issue](../../../issues) con el label _TODO_.
 
 Para abrir la ventana de las tareas en NetBeans, basta con pulsar las teclas <kbd>Ctrl</kbd>+<kbd>6</kbd>.
 <br>O bien siguiendo los pasos de la siguiente imagen
 <img src="img/TareasNetBeans.png" width="640px" height="512px"/>
 
-Para crear un comentario ```TODO``` en el codigo fuente, hay que escribir ```//TODO: ``` seguido de una descripcion de la tarea.
+Para crear un comentario `TODO` en el codigo fuente, hay que escribir `//TODO: ` seguido de una descripcion de la tarea.
 
-Quitar los comentarios ```TODO``` cuando ya no sean necesarios.
+Quitar los comentarios `TODO` cuando ya no sean necesarios.
 
 ## Estructura del proyecto
 > :open_file_folder: Codigo_util/
@@ -41,7 +41,7 @@ Quitar los comentarios ```TODO``` cuando ya no sean necesarios.
 >>>> ...
 
 ### Ejemplos de estructura de proyecto
-* [Hilos-Threads](../Hilos-Threads/Java)
+* [MySQL](../MySQL/Java)
 * [StringOrNumber](../StringOrNumber/Java)
 
 ### Librerias
