@@ -5,18 +5,16 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 /**
+ * Clase que tiene select, insert, update y delete, sentencias SQL.
  *
  * @author Alex Gracia
  * @version 1.0
  */
 public class ManejoBD {
 
-    // Variables
-    private final ConexionMySQL objConexion;
-
     public ManejoBD() {
-        // Inicializar objeto de la clase ConexionMySQL
-        objConexion = new ConexionMySQL();
+        // Crear objeto anonimo de la clase ConexionMySQL
+        new ConexionMySQL();
     }
 
     /**
@@ -39,7 +37,9 @@ public class ManejoBD {
             System.out.println("Error mostrando los datos");
         } finally {
             try {
-                rs.close();
+                if (rs != null) {
+                    rs.close();
+                }
             } catch (SQLException ex) {
                 System.out.println("Error");
                 System.out.println("Error cerrando el ResultSet");
@@ -123,7 +123,9 @@ public class ManejoBD {
             System.out.println("Error ejecutando la actualizacion de la BD.");
         } finally {
             try {
-                stmt.close();
+                if (stmt != null) {
+                    stmt.close();
+                }
             } catch (SQLException ex) {
                 System.out.println("Error");
                 System.out.println("Error cerrando el Statement");

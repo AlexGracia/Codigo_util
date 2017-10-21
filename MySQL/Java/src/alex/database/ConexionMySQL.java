@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 /**
- * Clase que abre una conexion a MySQL.
+ * Clase que tiene el codigo para abrir y cerrar una conexion a MySQL.
  *
  * @author Alex Gracia
  * @version 1.0

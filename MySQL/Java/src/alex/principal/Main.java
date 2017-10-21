@@ -5,6 +5,8 @@ import alex.database.ManejoBD;
 import java.util.Scanner;
 
 /**
+ * Clase principal que ejecuta el codigo de la clase ManejoBD y abre y cierra la
+ * conexion a MySQL con los metodos de dicha clase.
  *
  * @author Alex Gracia
  * @version 1.0
