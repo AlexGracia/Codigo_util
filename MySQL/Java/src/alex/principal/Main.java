@@ -16,6 +16,12 @@ public class Main {
      */
     public static void main(String[] args) {
 
+        // Crear objeto de la clase ConexionMySQL
+        ConexionMySQL objConexionMySQL = new ConexionMySQL();
+
+        // Iniciar conexion con MySQL
+        objConexionMySQL.abrirConexion();
+
         // Crear objeto de la clase ManejoBD
         ManejoBD objManejoBD = new ManejoBD();
 
@@ -73,8 +79,8 @@ public class Main {
         System.out.println(objManejoBD.mostrar());
         //</editor-fold>
 
-        // Cerrar la conexion
-        ConexionMySQL.cerrarConexion();
+        // Cerrar conexion con MySQL
+        objConexionMySQL.cerrarConexion();
     }
 
 }

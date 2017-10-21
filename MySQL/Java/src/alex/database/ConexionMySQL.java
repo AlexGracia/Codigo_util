@@ -56,7 +56,7 @@ public class ConexionMySQL {
     /**
      * Metodo que cierra la conexion a MySQL
      */
-    public static void cerrarConexion() {
+    public void cerrarConexion() {
         try {
             conexion.close();
         } catch (SQLException ex) {

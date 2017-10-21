@@ -12,14 +12,11 @@ import java.sql.Statement;
 public class ManejoBD {
 
     // Variables
-    private ConexionMySQL objConexion;
+    private final ConexionMySQL objConexion;
 
     public ManejoBD() {
-        // Crear objeto de la clase ConexionMySQL
+        // Inicializar objeto de la clase ConexionMySQL
         objConexion = new ConexionMySQL();
-
-        // Abrir la conexion
-        objConexion.abrirConexion();
     }
 
     /**
