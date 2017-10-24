@@ -9,4 +9,4 @@ En este proyecto se pretende interactuar con una base de datos, con las sentenci
 
 > Nota: para que la ejecución del programa sea correcta, hay que iniciar el servicio de MySQL previamente.
 >
-> <img src="../../.github/img/ServicioMySQL.png"/>
+> <img src="../../.github/img/ServicioMySQL.png" width="341px" height="220.5px"/>
