@@ -42,7 +42,7 @@ Quitar los comentarios `TODO` cuando ya no sean necesarios.
 
 ### Ejemplos de estructura de proyecto
 * [MySQL](../MySQL/Java)
-* [StringOrNumber](../StringOrNumber/Java)
+* [EjecutarFicheroExterno](../EjecutarFicheroExterno/Java)
 
 ### Librerias
 Si el proyecto necesita librerias, hay que crear una carpeta "___lib___" en el directorio del proyecto y guardar las librerias en dicha carpeta.
