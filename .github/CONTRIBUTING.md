@@ -1,7 +1,7 @@
 ## :tada: Contribuir a Codigo_util :confetti_ball:
 En este documento se ofrecen pautas para contribuir con Codigo_util.
 
-> Nota: Para más información visitar el siguiente artículo [setting-guidelines-for-repository-contributors](https://help.github.com/articles/setting-guidelines-for-repository-contributors/).
+> Nota: para más información visitar el siguiente artículo [setting-guidelines-for-repository-contributors](https://help.github.com/articles/setting-guidelines-for-repository-contributors/).
 
 Ten en cuenta que Codigo_util se publica con un [código de conducta](CODE_OF_CONDUCT.md). Al participar en este proyecto, acepta cumplir sus términos.
 
@@ -22,8 +22,9 @@ Para acordarnos de lo que queremos programar es bueno comentar el codigo usando 
 tambien podemos crear un [issue](../../../issues) con el label _TODO_.
 
 Para abrir la ventana de las tareas en NetBeans, basta con pulsar las teclas <kbd>Ctrl</kbd>+<kbd>6</kbd>.
-<br>O bien siguiendo los pasos de la siguiente imagen
-<img src="img/TareasNetBeans.png" width="640px" height="512px"/>
+<br>O bien siguiendo los pasos de la siguiente imagen:
+
+<img src="img/TareasNetBeans.png" width="480px" height="384px"/>
 
 Para crear un comentario `TODO` en el codigo fuente, hay que escribir `//TODO: ` seguido de una descripcion de la tarea.
 
