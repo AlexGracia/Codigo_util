@@ -9,7 +9,7 @@ import java.io.IOException;
  * FileWriter.
  *
  * @author Alex Gracia
- * @version 1.0
+ * @version 1.1
  * @date 27-abr-2018
  * @see FileWriter
  */
@@ -22,9 +22,9 @@ public class EscribirEnFichero extends FileWriter {
      * @param fileName
      * @param append
      * @throws IOException
-     * @since 1.0
+     * @since 1.1
      */
-    public EscribirEnFichero(String fileName, boolean append) throws IOException {
+    EscribirEnFichero(String fileName, boolean append) throws IOException {
         super(fileName, append);
     }
 
